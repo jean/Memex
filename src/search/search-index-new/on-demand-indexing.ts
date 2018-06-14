@@ -37,7 +37,9 @@ export async function createPageFromTab({
         rejectNoContent: !stubOnly,
     })
 
-    return new Page(pageData)
+    const page = new Page(pageData)
+    await page.loadRels()
+    return page
 }
 
 export async function createPageFromUrl({
@@ -63,7 +65,9 @@ export async function createPageFromUrl({
         rejectNoContent: !stubOnly,
     })
 
-    return new Page(pageData)
+    const page = new Page(pageData)
+    await page.loadRels()
+    return page
 }
 
 /**
