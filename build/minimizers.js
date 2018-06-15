@@ -6,9 +6,6 @@ export default () => [
         cache: true,
         parallel: true,
         sourceMap: true,
-        uglifyOptions: {
-            output: { ascii_only: true },
-        },
     }),
     new CssAssetsPlugin({}),
 ]

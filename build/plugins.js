@@ -1,4 +1,3 @@
-import { exec } from 'child_process'
 import { EnvironmentPlugin } from 'webpack'
 import ForkTsPlugin from 'fork-ts-checker-webpack-plugin'
 import CopyPlugin from 'copy-webpack-plugin'
@@ -10,7 +9,6 @@ import BuildNotifPlugin from 'webpack-build-notifier'
 import CssExtractPlugin from 'mini-css-extract-plugin'
 import SentryPlugin from '@sentry/webpack-plugin'
 import ZipPlugin from 'zip-webpack-plugin'
-import PostCompilePlugin from 'post-compile-webpack-plugin'
 // Disabling this for now as it adds 2-4 seconds to inc. build time - look into finding out why
 // import WebExtReloadPlugin from 'webpack-chrome-extension-reloader'
 
@@ -78,7 +76,7 @@ export default function({
             new SentryPlugin({
                 release: process.env.npm_package_version,
                 include: output.path,
-                dryRun: shouldPackage,
+                dryRun: true,
             }),
         )
     }
@@ -103,8 +101,6 @@ export default function({
                 filename: extPackageName,
                 exclude: [/\.map/],
             }),
-            // TODO: do this in node
-            new PostCompilePlugin(() => exec('sh package-source-code.sh')),
         )
     }
 
