@@ -1,4 +1,4 @@
-import { BrowserItem, ImportItemType } from './types'
+import { BrowserItem } from './types'
 
 type AllowTypes = { [key: string]: boolean }
 

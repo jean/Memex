@@ -1,4 +1,4 @@
-import { browser, Tabs } from 'webextension-polyfill-ts'
+import { Tabs } from 'webextension-polyfill-ts'
 
 import searchIndex from '../../search'
 import { blacklist } from '../../blacklist/background'

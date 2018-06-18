@@ -46,7 +46,7 @@ const runSuite = useOld => () => {
             ...params,
         } as any)
 
-    // Old model uses page IDs (derived from URL), new model simply uses normalized URL
+// Old model uses page IDs (derived from URL), new model simply uses normalized URL
     const PAGE_ID_1 = useOld ? 'page/bG9yZW0uY29tL3Rlc3Qy' : 'lorem.com/test2'
     const PAGE_ID_2 = useOld
         ? 'page/c3ViLmxvcmVtLmNvbS90ZXN0MQ%3D%3D'
@@ -56,7 +56,7 @@ const runSuite = useOld => () => {
 
     // Some things may be broken in old one, but no plans on fixing
     const testOnlyNew = useOld ? test.skip : test
-    const testOnlyOld = useOld ? test : test.skip
+    // const testOnlyOld = useOld ? test : test.skip
 
     // Set what index to use for tests + initialize data
     beforeAll(async () => {

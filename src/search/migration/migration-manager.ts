@@ -1,4 +1,4 @@
-import { browser, Storage } from 'webextension-polyfill-ts'
+import { browser } from 'webextension-polyfill-ts'
 import whenAllSettled from 'when-all-settled'
 
 import exportOldPages, { ExportParams } from '../search-index-old/export'

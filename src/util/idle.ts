@@ -13,7 +13,7 @@ interface IdleHandlers {
 export class IdleManager {
     public static DEF_INTERVAL = 20
 
-    private interval: number
+    private _interval: number
 
     // States to hold scheduled handlers in
     private handlers = {
@@ -44,7 +44,11 @@ export class IdleManager {
             browser.idle.setDetectionInterval(seconds)
         }
 
-        this.interval = seconds
+        this._interval = seconds
+    }
+
+    public get interval() {
+        return this._interval
     }
 
     public handleIdleStateChange = (state: IdleState) =>

@@ -1,4 +1,3 @@
-import groupBy from 'lodash/fp/groupBy'
 import Dexie from 'dexie'
 import 'dexie-mongoify'
 
