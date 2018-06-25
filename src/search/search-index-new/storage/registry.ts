@@ -2,7 +2,6 @@ import {
     RegisterableStorage,
     CollectionDefinitions,
     CollectionDefinition,
-    IndexDefinition,
 } from './types'
 import FIELD_TYPES from './fields'
 

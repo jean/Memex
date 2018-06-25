@@ -25,7 +25,7 @@ class Tooltip extends React.Component {
         return (
             <div className={styles.container}>
                 <h1 className={styles.header}>Memex.Link</h1>
-                <p className={styles.subText}>
+                <h3 className={styles.subHeader}>
                     With Memex.Links you can highlight any piece of text on the
                     web and share a link to it.{' '}
                     <a
@@ -35,7 +35,7 @@ class Tooltip extends React.Component {
                     >
                         More Information
                     </a>
-                </p>
+                </h3>
                 <Checkbox
                     id="show-memex-link"
                     isChecked={this.state.tooltip}

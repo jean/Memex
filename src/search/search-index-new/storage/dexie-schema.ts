@@ -1,10 +1,5 @@
 import StorageRegistry, { RegistryCollections } from './registry'
-import {
-    DexieSchema,
-    CollectionDefinition,
-    MigrationRunner,
-    IndexDefinition,
-} from './types'
+import { DexieSchema, CollectionDefinition, MigrationRunner } from './types'
 
 export function getDexieHistory(storageRegistry: StorageRegistry) {
     const collections = {}
